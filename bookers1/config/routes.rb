@@ -3,11 +3,10 @@ Rails.application.routes.draw do
 
 
   get 'books' => 'books#index'
-  get 'books/:id/edit' => 'books#edit', as: 'book_edit'
-  get 'books/index' => 'books#new'
-  get 'books/:id' => 'books#show', as: 'book_show'
+  get 'books/:id/edit' => 'books#edit', as: 'edit_book'
+  get 'books/:id' => 'books#show', as: 'show_book'
   post 'books' => 'books#create'
-  patch 'books/:id' => 'books#update', as: 'book_update'
-  delete 'books/:id' => 'books#destroy', as: 'book_destroy'
+  patch 'books/:id' => 'books#update', as: 'update_book'
+  delete 'books/:id' => 'books#destroy', as: 'destroy_book'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
