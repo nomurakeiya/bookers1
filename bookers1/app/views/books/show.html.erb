@@ -1,0 +1,16 @@
+<header>
+	<body>
+		<% if flash[:notice] %>
+			<p class="succes"><%= flash[:notice] %></p>
+		<% end %>
+		<div class="title-area">
+			<p>Title:<%= @book.title %></p>
+		</div>
+		<div class="body-area">
+			<p>Body:<%= @book.body %></p>
+		</div>
+		<%= link_to 'Edit', book_edit_path %>
+		|
+		<%= link_to 'Back', books_path %>
+	</body>
+</header>
